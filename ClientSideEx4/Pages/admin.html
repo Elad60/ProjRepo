@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Admin Page</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../JS/ajaxcalls.js"></script>
+    <script src="../JS/adminScript.js"></script>
+    <link href="../CSS/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="btn">
+        <input list="courses" id="courseSearch" placeholder="Search for a course..." style="width:400px;">
+        <datalist id="courses"></datalist>
+        <button class="btnStyle" id="findCourseBTN">Find Course</button>
+        <button class="btnStyle" id="showCoursesBTN" onclick="location.href='ShowCourses.html';">Show Courses</button>
+        <button class="btnStyle" id="insertCourseBTN">Insert Course</button>
+        <button class="btnStyle" onclick="location.href='index.html';">Back</button>
+
+        <form id="editCourseForm" style="display:none; padding: 20px; border: 1px solid #ccc; border-radius: 5px; position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%);">
+
+            <label for="courseTitle" style="display: block; margin-bottom: 10px;">Title:</label>
+            <input type="text" id="courseTitleTB" required style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;">
+
+            <label id="courseURL" style="display: block; margin-bottom: 10px;">Insert course URL:</label>
+            <input type="text" id="courseURLTB" required style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;">
+
+            <label id="labelInstructorID" style="display: none; margin-bottom: 10px;">Instructor ID:</label>
+            <select id="instructorIDTB" style="display:none; width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;"></select>
+
+            <label for="courseDuration" style="display: block; margin-bottom: 10px;">Duration (hours):</label>
+            <input type="number" id="courseDuration" required step="0.01" min="0" style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;">
+
+
+            <label for="courseFile" style="display: block; margin-bottom: 10px;">Upload File:</label>
+            <input type="file" id="courseFile" name="courseFile" accept=".pdf, .doc, .docx, .xls, .xlsx" style="margin-bottom: 15px;">
+
+            <button id="updateCourseBTN" type="submit" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">Update Course</button>
+        </form>
+
+    </div>
+    <div id="containerCourses">
+
+    </div>
+
+</body>
+</html>

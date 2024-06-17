@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Registration Form</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../JS/ajaxcalls.js"></script>
+    <script src="../JS/FromScript.js"></script>
+    <link href="../CSS/StyleSheet2.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="registerForm">
+        <table>
+            <tr>
+                <td><label for="emailTB">Email:</label></td>
+                <td><input type="email" id="emailTB" required pattern="^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$" /></td>
+            </tr>
+            <tr>
+                <td><label for="passwordTB">Password:</label></td>
+                <td><input type="password" id="passwordTB" required pattern="^.{4,}$" /></td>
+            </tr>
+            <tr>
+                <td><label for="nameTB">Name:</label></td>
+                <td><input type="text" id="nameTB" required /></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Register" id="submitBTN" /></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

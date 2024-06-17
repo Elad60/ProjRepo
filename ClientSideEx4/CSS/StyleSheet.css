@@ -1,0 +1,328 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+#containerCourses, #containerInstructorCourses, #containerInstructors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+#courseDiv {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 20px;
+    width: 300px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+    #courseDiv img {
+        border-radius: 8px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    #courseDiv h2 {
+        font-size: 1.5em;
+        margin: 10px 0;
+    }
+
+    #courseDiv p {
+        color: #555;
+    }
+
+    #courseDiv a {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 15px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+        #courseDiv a:hover {
+            background-color: #0056b3;
+        }
+
+    #courseDiv button {
+        margin-top: 10px;
+        padding: 10px 15px;
+        background-color: #28a745;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+        #courseDiv button:hover {
+            background-color: #218838;
+        }
+
+    #courseDiv:hover {
+        transform: translateY(-5px);
+    }
+
+#btn {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btnStyle {
+    padding: 15px 30px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+    .btnStyle:hover {
+        background-color: #0056b3;
+    }
+
+    .btnStyle a {
+        color: white;
+        text-decoration: none;
+    }
+
+h1 {
+    text-align: center;
+    font-size: 44px;
+}
+
+.filter {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+    .filter h1 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        color: #333;
+    }
+
+.filter-section {
+    margin-bottom: 20px;
+}
+
+    .filter-section label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .filter-section input[type="text"] {
+        width: calc(100% - 20px);
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .filter-section button {
+        width: 100%;
+        padding: 10px;
+        background-color: #28a745;
+        border: none;
+        border-radius: 4px;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+        .filter-section button:hover {
+            background-color: #218838;
+        }
+
+#loginForms {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    z-index: 999;
+}
+
+#editCourseForm {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+    #editCourseForm label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    #editCourseForm input[type="text"],
+    #editCourseForm input[type="number"],
+    #editCourseForm input[type="file"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 14px;
+        transition: border-color 0.3s;
+    }
+
+        #editCourseForm input[type="text"]:focus,
+        #editCourseForm input[type="number"]:focus,
+        #editCourseForm input[type="file"]:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+
+#updateCourseBTN {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+    #updateCourseBTN:hover {
+        background-color: #45a049;
+    }
+#containerTop5Courses {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    border-radius: 10px;
+    overflow-x: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+    #containerTop5Courses .courseDiv {
+        flex: 0 0 220px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        transition: transform 0.2s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
+        #containerTop5Courses .courseDiv:hover {
+            transform: translateY(-5px);
+        }
+
+    #containerTop5Courses h2 {
+        font-size: 1.2em;
+        margin: 0 0 10px;
+        color: #333;
+        text-align: center;
+    }
+
+    #containerTop5Courses p {
+        font-size: 1em;
+        margin: 5px 0;
+        color: #666;
+        text-align: center;
+    }
+#topCoursesHeader {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #e2e8f0, #edf2f7);
+}
+
+    #topCoursesHeader h1 {
+        font-size: 2em;
+        color: #2d3748;
+        margin: 0;
+    }
+
+    #topCoursesHeader p {
+        font-size: 1.1em;
+        color: #4a5568;
+        margin-top: 10px;
+    }
+
+#containerTop5Courses {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    border-radius: 10px;
+    overflow-x: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+    #containerTop5Courses .courseDiv {
+        flex: 0 0 220px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        transition: transform 0.2s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
+        #containerTop5Courses .courseDiv:hover {
+            transform: translateY(-5px);
+        }
+
+    #containerTop5Courses h2 {
+        font-size: 1.2em;
+        margin: 0 0 10px;
+        color: #333;
+        text-align: center;
+    }
+
+    #containerTop5Courses p {
+        font-size: 1em;
+        margin: 5px 0;
+        color: #666;
+        text-align: center;
+    }
+
+
